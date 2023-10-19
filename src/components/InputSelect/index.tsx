@@ -21,6 +21,7 @@ export function InputSelect<TItem>({
   const onChange = useCallback<InputSelectOnChange<TItem>>(
     (selectedItem) => {
       if (selectedItem === null) {
+        consumerOnChange(selectedItem)
         return
       }
 
